@@ -9,7 +9,7 @@ export default class ImageGrid extends Component{
   }
 
   componentDidMount() {
-    fetch(`https://api.unsplash.com/photos/?client_id=${key}&per_page=28`)
+    fetch(`https://api.unsplash.com/photos/?client_id=${key}&per_page=30`)
       .then(res => res.json())
       .then(images => {
         this.setState({
@@ -20,6 +20,7 @@ export default class ImageGrid extends Component{
 
   render(){
     const { images } = this.state
+   console.log(images);
     
     return(
       <div className="content">
